@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyalty Rewards | Visit Logging</title>
+    <meta name="description" content="Log your visits and earn rewards at your favorite pub.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Auth Section -->
+        <div id="auth-section">
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Enter your details to log your visit</p>
+            
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Address">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            
+            <button id="login-btn" class="btn btn-primary">Sign In</button>
+            <p id="auth-error" style="color: var(--error); font-size: 0.875rem; text-align: center; display: none; margin-top: 10px;"></p>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="hidden">
+            <h1>Visit Logger</h1>
+            <div id="bonus-info" class="bonus-counter">Total Free Drinks Earned: 0</div>
+            
+            <div class="loyalty-grid" id="loyalty-grid">
+                <!-- 10 Stamps will be generated here -->
+            </div>
+
+            <div id="action-container">
+                <button id="check-in-btn" class="btn btn-active">Log Visit</button>
+            </div>
+
+            <button id="logout-btn" class="logout-btn">Sign Out</button>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        // This is a placeholder for Firebase configuration
+        // In script.js, we will import and initialize
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
