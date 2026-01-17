@@ -12,33 +12,32 @@
     box-sizing: border-box;
 }
 
-/* Hide scrollbar for all browsers */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
+/* Hide scrollbar visually while keeping functional for engine */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 html,
 body {
-    -ms-overflow-style: none !important;
-    /* IE and Edge */
-    scrollbar-width: none !important;
+    scrollbar-width: none;
     /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
-html {
-    scroll-behavior: auto !important;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overscroll-behavior: none;
 }
 
 body {
     background-color: var(--bg-off-white);
     color: var(--text-black);
     font-family: var(--font-main);
-    overflow-x: hidden;
-    overscroll-behavior: none;
-    /* Prevent bounce at edges */
 }
 
 #main-header {
@@ -114,12 +113,24 @@ nav a:hover {
     /* Force GPU layer */
     filter: brightness(0.75);
     /* Reduced brightness for better contrast */
-    pointer-events: none;
-    /* Prevent video from capturing touch/clicks */
 }
 
-#content-spacer {
-    position: relative;
+#height-provider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+    /* Updated via JS */
+    pointer-events: none;
+}
+
+#smooth-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    will-change: transform;
     z-index: 10;
 }
 
@@ -131,8 +142,7 @@ nav a:hover {
 }
 
 .sticky-hero {
-    position: sticky;
-    top: 0;
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;

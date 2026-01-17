@@ -32,135 +32,142 @@
         </video>
     </div>
 
-    <!-- Content Area -->
-    <main id="content-spacer">
-        <section id="hero" class="hero-section">
-            <div class="sticky-hero">
-                <div class="hero-content reveal">
-                    <h1 class="reveal-text">Building Your Future</h1>
-                    <p>Quality construction with modular efficiency.</p>
-                    <div class="mouse"></div>
-                </div>
-            </div>
-        </section>
+    <!-- This provides the scrollbar height while being invisible to the user -->
+    <div id="height-provider"></div>
 
-        <section id="about" class="content-block">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text glass-card reveal">
-                        <h2>Our Story</h2>
-                        <p>Founded in 2010, BuildIt started as a small family business with a single mission: to
-                            redefine the construction experience through transparency and precision.</p>
-                        <p>Today, we are a leading firm known for our "Solid Foundations" approach, combining decades of
-                            structural expertise with the latest in sustainable building technology.</p>
-                    </div>
-                    <div class="about-image glass-card reveal">
-                        <div class="image-placeholder">
-                            <i data-lucide="users"></i>
-                            <p>Our Expert Team</p>
-                        </div>
+    <!-- This is the container that will be smoothed by the engine -->
+    <div id="smooth-wrapper">
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="sticky-hero">
+                    <div class="hero-content reveal">
+                        <h1 class="reveal-text">Building Your Future</h1>
+                        <p>Quality construction with modular efficiency.</p>
+                        <div class="mouse"></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="services" class="content-block">
-            <div class="container">
-                <h2 class="section-title reveal">Our Expertise</h2>
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <div class="icon-box">
-                            <i data-lucide="hammer"></i>
+            <section id="about" class="content-block">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text glass-card reveal">
+                            <h2>Our Story</h2>
+                            <p>Founded in 2010, BuildIt started as a small family business with a single mission: to
+                                redefine the construction experience through transparency and precision.</p>
+                            <p>Today, we are a leading firm known for our "Solid Foundations" approach, combining
+                                decades of
+                                structural expertise with the latest in sustainable building technology.</p>
                         </div>
-                        <h3>Renovations</h3>
-                        <p>Modernizing spaces with surgical precision and creative flair.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <div class="icon-box">
-                            <i data-lucide="home"></i>
-                        </div>
-                        <h3>New Builds</h3>
-                        <p>From blueprint to reality, we build homes that feel like home.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <div class="icon-box">
-                            <i data-lucide="building-2"></i>
-                        </div>
-                        <h3>Commercial</h3>
-                        <p>Scaling your business infrastructure with industrial-grade quality.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonial" class="content-block full-width">
-            <div class="container">
-                <div class="testimonial-band reveal">
-                    <blockquote class="quote">
-                        "BuildIt didn't just build a house; they built our future. Their attention to detail during the
-                        entire scrubbing process was incredible."
-                        <cite>— James Anderson, Lead Architect</cite>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="content-block">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-form-container glass-card reveal">
-                        <h2>Get In Touch</h2>
-                        <form id="contact-form" class="custom-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <div class="about-image glass-card reveal">
+                            <div class="image-placeholder">
+                                <i data-lucide="users"></i>
+                                <p>Our Expert Team</p>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="How can we help?" rows="4"
-                                    required></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="contact-info glass-card reveal">
-                        <h2>Location</h2>
-                        <div class="map-placeholder">
-                            <i data-lucide="map-pin"></i>
-                            <p>123 Construction Way, Build City</p>
-                        </div>
-                        <div class="contact-details">
-                            <p><i data-lucide="phone"></i> +1 (555) 123-4567</p>
-                            <p><i data-lucide="mail"></i> hello@buildit.com</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <!-- Footer -->
-    <footer id="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <h3>BUILDIT</h3>
-                <p>123 Construction Way, Industrial Park</p>
-                <p>Build City, BC 45678</p>
+            <section id="services" class="content-block">
+                <div class="container">
+                    <h2 class="section-title reveal">Our Expertise</h2>
+                    <div class="services-grid">
+                        <div class="service-card reveal">
+                            <div class="icon-box">
+                                <i data-lucide="hammer"></i>
+                            </div>
+                            <h3>Renovations</h3>
+                            <p>Modernizing spaces with surgical precision and creative flair.</p>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="icon-box">
+                                <i data-lucide="home"></i>
+                            </div>
+                            <h3>New Builds</h3>
+                            <p>From blueprint to reality, we build homes that feel like home.</p>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="icon-box">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <h3>Commercial</h3>
+                            <p>Scaling your business infrastructure with industrial-grade quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonial" class="content-block full-width">
+                <div class="container">
+                    <div class="testimonial-band reveal">
+                        <blockquote class="quote">
+                            "BuildIt didn't just build a house; they built our future. Their attention to detail during
+                            the
+                            entire scrubbing process was incredible."
+                            <cite>— James Anderson, Lead Architect</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="content-block">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-form-container glass-card reveal">
+                            <h2>Get In Touch</h2>
+                            <form id="contact-form" class="custom-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" placeholder="How can we help?" rows="4"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="contact-info glass-card reveal">
+                            <h2>Location</h2>
+                            <div class="map-placeholder">
+                                <i data-lucide="map-pin"></i>
+                                <p>123 Construction Way, Build City</p>
+                            </div>
+                            <div class="contact-details">
+                                <p><i data-lucide="phone"></i> +1 (555) 123-4567</p>
+                                <p><i data-lucide="mail"></i> hello@buildit.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="main-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>BUILDIT</h3>
+                    <p>123 Construction Way, Industrial Park</p>
+                    <p>Build City, BC 45678</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2026 BuildIt Construction. All rights reserved.
+                </div>
             </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                <a href="#" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
-            </div>
-            <div class="footer-copy">
-                &copy; 2026 BuildIt Construction. All rights reserved.
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
     <script>
