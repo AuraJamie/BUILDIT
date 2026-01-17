@@ -114,6 +114,8 @@ nav a:hover {
     /* Force GPU layer */
     filter: brightness(0.75);
     /* Reduced brightness for better contrast */
+    pointer-events: none;
+    /* Prevent video from capturing touch/clicks */
 }
 
 #content-spacer {
